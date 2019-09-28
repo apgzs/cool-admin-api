@@ -11,9 +11,9 @@ Node版后台基础框架基于[Egg.js](https://eggjs.org/zh-cn/)(阿里出品)
 * 网络：**[axios](https://www.npmjs.com/package/axios)** 
 
 ## 运行
- 环境 `Node.js>=8.9.0` `Redis`
+ 环境 `Node.js>=8.9.0` `Redis` `mysql`
  
- 新建并导入数据库，数据库脚本位于 `db/init.sql`,修改数据库连接信息`config/config.*.typeorm`
+ 新建并导入数据库,修改数据库连接信息
  
  推荐使用`yarn`
  
