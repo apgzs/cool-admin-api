@@ -6,6 +6,6 @@ import { Context } from 'egg';
 export default class User extends BaseController {
     constructor (ctx: Context) {
         super(ctx);
-        this.setEntity(this.ctx.repo.sys.User);
+        this.setEntity(this.ctx.repo.User);
     }
 }
