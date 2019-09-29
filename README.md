@@ -42,9 +42,8 @@ Node版后台基础框架基于[Egg.js](https://eggjs.org/zh-cn/)(阿里出品)
 
 ![努力开发中](https://cool-admin.com/img/work3.png)
 
- ## 快速开发6个接口 
- <iframe src="//player.bilibili.com/player.html?aid=69398358&cid=120277692&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
- 
+ ## 快速开发6个接口 （演示视频： https://www.bilibili.com/video/av69398358/）
+
  ## 数据模型
   数据模型必须放在`app/entities/*`下，否则[typeorm](https://typeorm.io "typeorm")无法识别，如:
 ```js
