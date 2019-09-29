@@ -170,37 +170,42 @@ export abstract class BaseService extends Service {
         const find = entity
             .createQueryBuilder()
             .take(parseInt(size))
-            .skip(String((page - 1) * size))
-            .where(option.where);
-        // 附加排序
-        if (!_.isEmpty(option.addOrderBy)) {
-            for (const key in option.addOrderBy) {
-                find.addOrderBy(key, option.addOrderBy[key].toUpperCase());
+            .skip(String((page - 1) * size));
+        if (option) {
+            // 默认条件
+            if (option.where) {
+                find.where(option.where);
+            }
+            // 附加排序
+            if (!_.isEmpty(option.addOrderBy)) {
+                for (const key in option.addOrderBy) {
+                    find.addOrderBy(key, option.addOrderBy[key].toUpperCase());
+                }
+            }
+            // 关键字模糊搜索
+            if (keyWord) {
+                keyWord = `%${ keyWord }%`;
+                find.andWhere(new Brackets(qb => {
+                    const keyWordLikeFields = option.keyWordLikeFields;
+                    for (let i = 0; i < option.keyWordLikeFields.length; i++) {
+                        qb.orWhere(`${ keyWordLikeFields[i] } like :keyWord`, { keyWord });
+                    }
+                }));
+            }
+            // 字段全匹配
+            if (!_.isEmpty(option.fieldEq)) {
+                for (const key of option.fieldEq) {
+                    const c = {};
+                    if (query[key]) {
+                        c[key] = query[key];
+                        find.andWhere(`${ key } = :${ key }`, c);
+                    }
+                }
             }
         }
         // 接口请求的排序
         if (sort && order) {
             find.addOrderBy(order, sort.toUpperCase());
-        }
-        // 关键字模糊搜索
-        if (keyWord) {
-            keyWord = `%${ keyWord }%`;
-            find.andWhere(new Brackets(qb => {
-                const keyWordLikeFields = option.keyWordLikeFields;
-                for (let i = 0; i < option.keyWordLikeFields.length; i++) {
-                    qb.orWhere(`${ keyWordLikeFields[i] } like :keyWord`, { keyWord });
-                }
-            }));
-        }
-        // 字段全匹配
-        if (!_.isEmpty(option.fieldEq)) {
-            for (const key of option.fieldEq) {
-                const c = {};
-                if (query[key]) {
-                    c[key] = query[key];
-                    find.andWhere(`${ key } = :${ key }`, c);
-                }
-            }
         }
         return find;
     }
