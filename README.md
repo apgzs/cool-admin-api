@@ -59,7 +59,7 @@ Node版后台基础框架基于[Egg.js](https://eggjs.org/zh-cn/)(阿里出品)
   数据模型必须放在`app/entities/*`下，否则[typeorm](https://typeorm.io "typeorm")无法识别，如:
 ```js
  import { Entity, Column, Index } from 'typeorm';
- import { BaseEntity } from '../../lib/base/entity';
+ import { BaseEntity } from 'egg-cool-entity';
  /**
   * 系统角色
   */
@@ -83,9 +83,9 @@ Node版后台基础框架基于[Egg.js](https://eggjs.org/zh-cn/)(阿里出品)
 ## 控制器
 有了数据表之后，如果希望通过接口对数据表进行操作，我们就必须在`controller`文件夹下新建对应的控制器，如：
 ```js
-import { BaseController } from '../../../lib/base/controller';
+import { BaseController } from 'egg-cool-controller';
 import { Context } from 'egg';
-import routerDecorator from '../../../lib/router';
+import routerDecorator from 'egg-cool-router';
 import { Brackets } from 'typeorm';
 /**
  * 系统-角色
@@ -125,8 +125,8 @@ export default class SysRoleController extends BaseController {
 ## 数据缓存
 有些业务场景，我们并不希望每次请求接口都需要操作数据库，如：今日推荐、上个月排行榜等，数据存储在`redis`，注：缓存注解只在`service`层有效
 ```js
-import { BaseService } from '../../lib/base/service';
-import { Cache } from '../../lib/cache';
+import { BaseService } from 'egg-cool-service';
+import { Cache } from 'egg-cool-cache';
 /**
  * 业务-排行榜服务类
  */
