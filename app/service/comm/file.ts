@@ -1,4 +1,4 @@
-import { BaseService } from '../../lib/base/service';
+import { BaseService } from 'egg-cool-service';
 import * as moment from 'moment';
 import * as uuid from 'uuid/v1';
 import axios from 'axios';

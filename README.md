@@ -14,6 +14,14 @@ Node版后台基础框架基于[Egg.js](https://eggjs.org/zh-cn/)(阿里出品)
 * 鉴权：**[egg-jwt](https://www.npmjs.com/package/egg-jwt)** 
 * 网络：**[axios](https://www.npmjs.com/package/axios)** 
 
+## 核心组件
+独有cool-admin.com发布的npm组件
+* 路由：**[egg-cool-router](https://www.npmjs.com/package/egg-cool-router)**
+* 控制器：**[egg-cool-controller](https://www.npmjs.com/package/egg-cool-controller)**
+* 服务层：**[egg-cool-service](https://www.npmjs.com/package/egg-cool-service)** 
+* 缓存：**[egg-cool-cache](https://www.npmjs.com/package/egg-cool-cache)** 
+* 模型：**[egg-cool-entity](https://www.npmjs.com/package/egg-cool-entity)** 
+
 ## 运行
  环境 `Node.js>=8.9.0` `Redis` `mysql`
  

@@ -13,10 +13,6 @@ const plugin: EggPlugin = {
         enable: true,
         package: 'egg-oss',
     },
-    redis: {
-        enable: true,
-        package: 'egg-redis',
-    },
 };
 
 export default plugin;

@@ -52,14 +52,6 @@ export default (appInfo: EggAppInfo) => {
         whitelist,
     };
 
-    config.redis = {
-        client: {
-            port: 6379,
-            host: '127.0.0.1',
-            password: '',
-            db: 0,
-        },
-    };
     // 新增特殊的业务配置
     const bizConfig = {
         sourceUrl: `https://github.com/eggjs/examples/tree/master/${ appInfo.name }`

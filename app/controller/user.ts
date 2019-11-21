@@ -1,11 +1,9 @@
-import { BaseController } from '../lib/base/controller';
-import routerDecorator from '../lib/router';
-import { Context } from 'egg';
+import { BaseController } from 'egg-cool-controller';
+import router from 'egg-cool-router';
 
-@routerDecorator.prefix('/user', [ 'add', 'delete', 'update', 'info', 'list', 'page' ])
+@router.prefix('/user', [ 'add', 'delete', 'update', 'info', 'list', 'page' ])
 export default class User extends BaseController {
-    constructor (ctx: Context) {
-        super(ctx);
+    init() {
         this.setEntity(this.ctx.repo.User);
     }
 }

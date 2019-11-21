@@ -1,5 +1,5 @@
 import { Application } from 'egg';
-import { initRouter } from '../app/lib/router';
+import { initRouter } from 'egg-cool-router';
 
 export default (app: Application) => {
     initRouter(app);
