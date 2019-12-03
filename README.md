@@ -1,6 +1,3 @@
-## 学习交流微信
-![学习交流微信](https://i.loli.net/2019/10/24/VW1wFJMHhoGE5ra.jpg)
-
 ## 展示
 * 演示地址：https://show.cool-admin.com
 * 文档地址：https://docs.cool-admin.com
@@ -177,4 +174,7 @@ async page (query) {
 | condition  | 布尔型  | 只有满足改条件才会拼接上相应的sql和参数 |
 |  sql |  字符串 |  需要拼接的参数 |
 |  params | 数组  |  相对应的参数 |
+
+## 学习交流微信
+![学习交流微信](https://i.loli.net/2019/10/24/VW1wFJMHhoGE5ra.jpg)
 

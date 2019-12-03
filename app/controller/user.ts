@@ -5,5 +5,6 @@ import router from 'egg-cool-router';
 export default class User extends BaseController {
     init() {
         this.setEntity(this.ctx.repo.User);
+        this.setService(this.service.user);
     }
 }
