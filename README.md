@@ -18,6 +18,12 @@ Node版后台基础框架基于[Egg.js](https://eggjs.org/zh-cn/)(阿里出品)
 * 服务层：**[egg-cool-service](https://www.npmjs.com/package/egg-cool-service)** 
 * 缓存：**[egg-cool-cache](https://www.npmjs.com/package/egg-cool-cache)** 
 * 模型：**[egg-cool-entity](https://www.npmjs.com/package/egg-cool-entity)** 
+* 支付 **[egg-cool-pay](https://www.npmjs.com/package/egg-cool-pay)** 
+* 搜索 **[egg-cool-es](https://www.npmjs.com/package/egg-cool-es)** 
+。。。。。。
+
+## 开发交流微信群
+![微信](https://cool-comm.oss-cn-shenzhen.aliyuncs.com/WechatIMG22.jpeg?x-oss-process=image/resize,w_300)
 
 ## 运行
  环境 `Node.js>=8.9.0` `Redis` `mysql`
@@ -50,7 +56,14 @@ Node版后台基础框架基于[Egg.js](https://eggjs.org/zh-cn/)(阿里出品)
 
 ![努力开发中](https://cool-admin.com/img/work3.png)
 
- ## 快速开发6个接口 （演示视频： https://www.bilibili.com/video/av69398358/）
+
+ ##视频教程:
+
+ **cool-admin后端简单入门视频(快速写6个api接口)：https://www.bilibili.com/video/BV1SE411j74K**
+
+ **cool-admin前后端配合使用：https://www.bilibili.com/video/av90478011/**
+
+ **cool-admin前端crud内部培训教程：https://www.bilibili.com/video/av89512654/**
 
  ## 数据模型
   数据模型必须放在`app/entities/*`下，否则[typeorm](https://typeorm.io "typeorm")无法识别，如:
@@ -175,10 +188,6 @@ async page (query) {
 |  sql |  字符串 |  需要拼接的参数 |
 |  params | 数组  |  相对应的参数 |
 
-## 学习交流微信
 
-lpap123456
-
-![学习交流微信](https://i.loli.net/2019/10/24/VW1wFJMHhoGE5ra.jpg)
 
 
