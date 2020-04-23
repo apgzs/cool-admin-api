@@ -50,12 +50,6 @@ Node版后台基础框架基于[Egg.js](https://eggjs.org/zh-cn/)(阿里出品)
  http://localhost:7001
 ```
 
-![努力开发中](https://cool-admin.com/img/work1.png)
-
-![努力开发中](https://cool-admin.com/img/work2.png)
-
-![努力开发中](https://cool-admin.com/img/work3.png)
-
 
  ##视频教程:
 
